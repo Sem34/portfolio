@@ -5,91 +5,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="less.js"></script>
+    <link rel="stylesheet" href="css/experiments.css">
+    <script src="js/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+
+    <title>Document</title>
+
 </head>
 
 <body>
     <div class="container">
+        <div id="particles-js" class="hintergrund"></div>
         <!-- block1 -------------------- -->
         <div class="header">
-            <div class="header__menu">
+            <div class="header__menu gradient">
                 <div class="lcw">
                     <div class="nav">
                         <ul class="nav__items">
                             <li class="nav__item"><a href="">Home</a></li>
-                            <li class="nav__item"><a href="#about">About me</a></li>
+                            <li class="nav__item"><a href="#services">Services</a></li>
                             <li class="nav__item"><a href="#skills">Skills</a></li>
+                            <li class="nav__item"><a href="#about">About me</a></li>
                             <li class="nav__item"><a href="#portfolio">Portfolio</a></li>
                             <li class="nav__item"><a href="#contacts">Contacts</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <div class="marquee">
+                <span class="header__menu-logo">
+                    Semen <br> Vylehzhaznin
+                </span>
+                <span class="header__text">
+                    Front-end Developer<br>25 years old, Kiyv
+                </span>
+                <span class="header__language">
+                    ENG UA
+                </span>
+            </div>
+
             <div class="lcw">
-                <div class="header__content">
-                    <div class="header__menu-logo">
-                        <p>Semen <br> Vylehzhaznin</p>
+                <div class="header__google">
+                    <div class="google__img">
+                        <a href="" target="_blank">
+                            <img src="images/google_logo.svg" alt="Googe">
+                        </a>
                     </div>
-                    <div class="header__text">
-                        <p>Front-end Developer<br>25 years old, Kiyv</p>
+                    <div id="typed-strings">
+                        <span>верстка сайта цена</span>
+                        <span>нанять разработчика</span>
+                        <span>нанять разработчика за еду</span>
+                        <span>сколько ест разработчик</span>
+                        <span>где взять еду разработчику</span>
+                        <span>сверстать сайт самому</span>
+                        <span>купить верстку сайта</span>
+                        <span>Сайт на конструкторе</span>
+                        <span>Сайт быстро и недорого </span>
                     </div>
-                    <div class="header__language">
-                        <p>ENG</p>
+                    <div class="inputWrapper">
+                        <input type="text" placeholder="Введите поисковый запрос или URL" id="typed"
+                            class="text-typing">
                     </div>
                 </div>
-            </div>
-            <div class="lcw">
-                <div class="header__img">
-                    <img src="images/header-cod.jpg" alt="HTML">
+                <div class="header__title">
+                    <p>Устали искать?</p>
                 </div>
             </div>
             <div class="header__button">
                 <div class="lcw">
-                    <button class="header__button-scroll"><a href="#about">Scroll to About Me</a></button>
+                    <button class="header__button-scroll"><a href="#services">Scroll to Services</a></button>
                 </div>
 
             </div>
         </div>
         <!-- end block1 -------------------- -->
-        <!-- block2 about -------------------- -->
-        <div class="about" id="about">
+        <!-- block SERVICES -------------------- -->
+        <div class="services" id="services">
             <div class="lcw">
-                <div class="about__content">
-                    <div class="about__img">
-                        <img src="images/Sem.JPG" alt="Semen Vylehzhanin">
+                <div class="s__containter">
+                    <div class="s__title">
+                        <p>Services</p>
                     </div>
-                    <div class="about__info">
-                        <div class="about__title">
-                            <p>About Me</p>
+                    <div class="s__content">
+                        <div class="s__img">
+                            <img src="images/header-cod.jpg" alt="">
                         </div>
-                        <div class="about__text">
-                            <p>My hobby is front-end development.<br> Now it has reached a new level, as I have been
-                                doing
-                                this for 2 years.<br>
-                            </p>
-                            <p>
-                                My stack:<br>
-                                HTML<br>
-                                CSS<br>
-                                SCSS<br>
-                                LESS<br>
-                                БЭМ<br>
-                                Git<br>
-                                JavaScript
-                            </p>
+                        <div class="s__content-text">
+                            <p> - Верстка с нуля</p>
+                            <p> - Верстка любой сложности</p>
+                            <p> - Верстка по макету Photoshop/Figma</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end block2 about -------------------- -->
+        <!-- end block SERVICES ---------------------->
         <!-- block3 skills -------------------- -->
         <div class="skills" id="skills">
             <div class="lcw">
                 <div class="skills__content">
                     <div class="skills__title">Skills</div>
+                    <div class="content">
+                        <span class="tagcloud">
+                            <span class="tagcloud--item"></span>
+                            <span class="tagcloud--item"></span>
+                            <span class="tagcloud--item"></span>
+                            <span class="tagcloud--item"></span>
+                            <span class="tagcloud--item"></span>
+                            <span class="tagcloud--item"></span>
+                            <span class="tagcloud--item"></span>
+                        </span>
+                    </div>
                     <div class="skills__text">I work in such programs as</div>
                 </div>
                 <div class="skills__programs">
@@ -129,72 +157,122 @@
             </div>
         </div>
         <!-- end block3 skills -------------------- -->
-        <!-- block4 portfolio -------------------- -->
-        <div class="portfolio" id="portfolio">
+        <!-- block about -------------------- -->
+        <div class="about " id="about">
             <div class="lcw">
-                <div class="pf__content">
-                    <div class="pf__title">Portfolio</div>
-                    <div class="pf__case">
-                        <div class="pf__case-img">
-                            <img src="images/wearher_API.png" alt="weather_API">
+                <div class="about__title">
+                    <p>About Me</p>
+                </div>
+                <div class="about__content">
+
+                    <div class="about__img">
+                        <img src="images/Sem.JPG" alt="Semen Vylehzhanin">
+                    </div>
+                    <div class="about__info">
+
+                        <div class="about__text">
+                            <p>My hobby is front-end development.<br> Now it has reached a new level, as I have been
+                                doing
+                                this for 2 years.<br>
+                            </p>
+                            <p>
+                                So, if you have reached this block, then you still have interest.<br>
+
+
+                            </p>
+                            <p> This is good, because further down there are a couple of examples of my work<br>
+                                and a block with contacts of all social networks and Telegram/WhatsApp. <br></p>
+                            <p>I'm waiting for your
+                                message!</p>
+
                         </div>
-                        <div class="pf__case-link">
-                            <a href="https://sem34.github.io/weather_API/" target="_blank">Go to the project
-                                wearher_API</a>
+                        <div class="about__button">
+                            <button class="about__button-scroll"><a href="#contacts">Scroll to Contacts</a></button>
                         </div>
                     </div>
+
                 </div>
+
             </div>
         </div>
-        <!-- end block4 portfolio -------------------- -->
-        <!-- block5 contacts -------------------- -->
-        <div class="contacts" id="contacts">
-            <div class="lcw">
-                <div class="contacts__content">
-                    <div class="contacts__title">
-                        <p>Contacts</p>
-                    </div>
-                    <div class="contacts__text">
-                        <p>Want to know more or just chat?<br>
-                            You are welcome!</p>
-                    </div>
-                    <div class="contacts__button">
-                        <button class="contacts__btn">Send message</button>
-                    </div>
-                    <div class="contacts__social">
-                        <div class="contacts__social-tg social">
-                            <a href="https://t.me/+380639426241" target="_blank"><img
-                                    src="images/Telegram_logo.svg.webp" alt="Telegram"></a>
-                        </div>
-                        <div class="contacts__social-wp social">
-                            <a href="https://wa.me/+380639426241" target="_blank"><img
-                                    src="images/WhatsApp_logo-color-vertical.svg.webp" alt="WhatsApp"></a>
-                        </div>
-                        <div class="contacts__social-fb social">
-                            <a href="https://www.facebook.com/Semen.Vylehzhanin" target="_blank"><img
-                                    src="images/Facebook_Logo_(2019).png.webp" alt="Facebook"></a>
-                        </div>
-                        <div class="contacts__social-inst social">
-                            <a href="https://www.instagram.com/vylehzhanin_s/" target="_blank"><img
-                                    src="images/Instagram_logo_2016.svg.webp" alt="Instagram"></a>
-                        </div>
-                        <div class="contacts__social-in social">
-                            <a href="https://www.linkedin.com/in/semen-vylehzhanin-062371210/" target="_blank"><img
-                                    src="images/linkedin_logo.png" alt="LinkedIn"></a>
-                        </div>
-                        <div class="contacts__social-git social">
-                            <a href="https://github.com/Sem34" target="_blank"><img src="images/GitHub-logo.png"
-                                    alt="GitHub"></a>
-                        </div>
-                    </div>
-                    <div class="contacts__copyright">
-                        <p> &#169; Semen Vylehzhanin</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end block5 contacts -------------------- -->
     </div>
+    <!-- end block about -------------------- -->
+    <!-- block4 portfolio -------------------- -->
+    <div class="portfolio" id="portfolio">
+        <div class="lcw">
+            <div class="pf__content">
+                <div class="pf__title">Portfolio</div>
+                <div class="pf__case">
+                    <div class="pf__case-img">
+                        <a href="https://sem34.github.io/weather_API/" target="_blank"><img src="images/wearher_API.png"
+                                alt="weather_API"></a>
+                    </div>
+
+                </div>
+                <div class="pf__case-link">
+                    <a href="https://sem34.github.io/weather_API/" target="_blank">Go to the project
+                        wearher_API</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- end block4 portfolio -------------------- -->
+    <!-- block5 contacts -------------------- -->
+    <div class="contacts" id="contacts">
+        <div class="lcw">
+            <div class="contacts__content">
+                <div class="contacts__title">
+                    <p>Contacts</p>
+                </div>
+                <div class="contacts__text">
+                    <p>Want to know more or just chat?<br>
+                        You are welcome!</p>
+                </div>
+                <div class="contacts__button">
+                    <button class="contacts__btn">Send message</button>
+                </div>
+                <div class="contacts__social">
+                    <div class="contacts__social-tg social">
+                        <a href="https://t.me/+380639426241" target="_blank"><img src="images/Telegram_logo.svg.webp"
+                                alt="Telegram"></a>
+                    </div>
+                    <div class="contacts__social-wp social">
+                        <a href="https://wa.me/+380639426241" target="_blank"><img
+                                src="images/WhatsApp_logo-color-vertical.svg.webp" alt="WhatsApp"></a>
+                    </div>
+                    <div class="contacts__social-fb social">
+                        <a href="https://www.facebook.com/Semen.Vylehzhanin" target="_blank"><img
+                                src="images/Facebook_Logo_(2019).png.webp" alt="Facebook"></a>
+                    </div>
+                    <div class="contacts__social-inst social">
+                        <a href="https://www.instagram.com/vylehzhanin_s/" target="_blank"><img
+                                src="images/Instagram_logo_2016.svg.webp" alt="Instagram"></a>
+                    </div>
+                    <div class="contacts__social-in social">
+                        <a href="https://www.linkedin.com/in/semen-vylehzhanin-062371210/" target="_blank"><img
+                                src="images/linkedin_logo.png" alt="LinkedIn"></a>
+                    </div>
+                    <div class="contacts__social-git social">
+                        <a href="https://github.com/Sem34" target="_blank"><img src="images/GitHub-logo.png"
+                                alt="GitHub"></a>
+                    </div>
+                </div>
+                <div class="contacts__copyright">
+                    <p> &#169; Semen Vylehzhanin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end block5 contacts -------------------- -->
+
+
+    </div>
+
+    <script type="text/javascript" src="js/TagCloud.min.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 
 </html>
